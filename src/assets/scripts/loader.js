@@ -4,6 +4,7 @@ function get(url) {
       // Do the usual XHR stuff
       var req = new XMLHttpRequest();
       req.open('GET', url);
+      //req.setRequestHeader("Access-Control-Allow-Origin", "*");
   
       req.onload = function() {
         // This is called even on 404 etc
