@@ -1,4 +1,4 @@
-function get(url) {
+export function get(url) {
     // Return a new promise.
     return new Promise(function(resolve, reject) {
       // Do the usual XHR stuff

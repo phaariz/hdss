@@ -10,10 +10,11 @@ export default (function () {
 
   const drawSparklines = () => {
     if ($('#sparklinedash').length > 0) {
-      $('#sparklinedash').sparkline([0, 5, 6, 10, 9, 12, 4, 9], {
+      var testob = [110, 115, 116, 110, 119, 0, 114, 119,10,3,11,6,13,500,0,5,1,8,19,15,121,8,14,2,0,8,5,6,7,19];
+      $('#sparklinedash').sparkline(testob, {
         type: 'bar',
         height: '20',
-        barWidth: '3',
+        barWidth: '2',
         resize: true,
         barSpacing: '3',
         barColor: '#4caf50',
