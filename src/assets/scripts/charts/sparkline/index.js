@@ -2,14 +2,18 @@ import * as $ from 'jquery';
 import 'jquery-sparkline';
 import { debounce } from 'lodash';
 import { COLORS } from '../../constants/colors';
+import { numberofpatients } from '../../functions/index';
 
 export default (function () {
   // ------------------------------------------------------
   // @Dashboard Sparklines
   // ------------------------------------------------------
-
+  //numberofpatients(30);
   const drawSparklines = () => {
     if ($('#sparklinedash').length > 0) {
+      
+    //console.log(numberofpatients(30));
+     // console.log("some: "+ some);
       var testob = [110, 115, 116, 110, 119, 0, 114, 119,10,3,11,6,13,500,0,5,1,8,19,15,121,8,14,2,0,8,5,6,7,19];
       $('#sparklinedash').sparkline(testob, {
         type: 'bar',

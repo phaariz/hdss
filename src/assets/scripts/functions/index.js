@@ -9,15 +9,17 @@ export function getDiseases() {
   });
 }
 
-export function numberofpatients(days){
-  get('https://dssapi.nodescave.com/numberofpatients/?param='+days).then(function(response) {
+export async function numberofpatients(days){
+  get('https://dssapi.nodescave.com/numberofpatients/?param='+days).then(
+  function(response) {
     var NumberOfPatientsInTime = JSON.parse(response);
       console.log("Success!", NumberOfPatientsInTime);
      // obj.innerHTML("hello");
-      //return  NumberOfPatientsInTime.length;
-    }, function(error) {
+    //  return  NumberOfPatientsInTime;
+    },
+    function(error) {
       console.error("Failed!", error);
     });
   }
 
-  numberofpatients(30);
+numberofpatients(30);

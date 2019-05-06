@@ -1,7 +1,7 @@
 {
   "plugins": [
     "transform-class-properties",
-    "transform-object-rest-spread"
+    "transform-object-rest-spread",
   ],
   "presets": [
     ["env", {
@@ -9,4 +9,7 @@
     }],
     "stage-0"
   ]
+
+
+// "presets": ["@babel/preset-env"],
 }
