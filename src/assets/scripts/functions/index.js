@@ -10,16 +10,16 @@ export function getDiseases() {
 }
 
 export async function numberofpatients(days){
-  get('https://dssapi.nodescave.com/numberofpatients/?param='+days).then(
+  return await get('https://dssapi.nodescave.com/numberofpatients/?param='+days).then(
   function(response) {
     var NumberOfPatientsInTime = JSON.parse(response);
-      console.log("Success!", NumberOfPatientsInTime);
-     // obj.innerHTML("hello");
-    //  return  NumberOfPatientsInTime;
+     return NumberOfPatientsInTime;
     },
     function(error) {
       console.error("Failed!", error);
     });
   }
+ 
 
-numberofpatients(30);
+
+
