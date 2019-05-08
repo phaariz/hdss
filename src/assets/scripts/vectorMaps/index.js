@@ -1,7 +1,8 @@
 import * as $ from 'jquery';
 import 'jvectormap';
 import 'jvectormap/jquery-jvectormap.css';
-import './jquery-jvectormap-world-mill.js';
+// import './jquery-jvectormap-world-mill.js';
+import './maldives_map.js';
 import { debounce } from 'lodash';
 
 export default (function () {
@@ -15,7 +16,7 @@ export default (function () {
         <div
           id="vmap"
           style="
-            height: 490px;
+            height: 400px;
             position: relative;
             overflow: hidden;
             background-color: transparent;
@@ -25,7 +26,7 @@ export default (function () {
       `);
 
       $('#vmap').vectorMap({
-        map: 'world_mill',
+        map: 'maldives',
         backgroundColor: '#fff',
         borderColor: '#fff',
         borderOpacity: 0.25,
@@ -48,35 +49,35 @@ export default (function () {
           },
         },
 
-        markers : [{
-          latLng : [21.00, 78.00],
-          name : 'INDIA : 350',
-        }, {
-          latLng : [-33.00, 151.00],
-          name : 'Australia : 250',
-        }, {
-          latLng : [36.77, -119.41],
-          name : 'USA : 250',
-        }, {
-          latLng : [55.37, -3.41],
-          name : 'UK   : 250',
-        }, {
-          latLng : [25.20, 55.27],
-          name : 'UAE : 250',
-        }],
-        series: {
-          regions: [{
-            values: {
-              'US': 298,
-              'SA': 200,
-              'AU': 760,
-              'IN': 200,
-              'GB': 120,
-            },
-            scale: ['#03a9f3', '#02a7f1'],
-            normalizeFunction: 'polynomial',
-          }],
-        },
+        // markers : [{
+        //   latLng : [21.00, 78.00],
+        //   name : 'INDIA : 350',
+        // }, {
+        //   latLng : [-33.00, 151.00],
+        //   name : 'Australia : 250',
+        // }, {
+        //   latLng : [36.77, -119.41],
+        //   name : 'USA : 250',
+        // }, {
+        //   latLng : [55.37, -3.41],
+        //   name : 'UK   : 250',
+        // }, {
+        //   latLng : [25.20, 55.27],
+        //   name : 'UAE : 250',
+        // }],
+        // series: {
+        //   regions: [{
+        //     values: {
+        //       'US': 298,
+        //       'SA': 200,
+        //       'AU': 760,
+        //       'IN': 200,
+        //       'GB': 120,
+        //     },
+        //     scale: ['#03a9f3', '#02a7f1'],
+        //     normalizeFunction: 'polynomial',
+        //   }],
+        // },
         hoverOpacity: null,
         normalizeFunction: 'linear',
         zoomOnScroll: false,
