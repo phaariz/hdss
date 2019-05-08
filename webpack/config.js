@@ -28,7 +28,7 @@ const
 
 const
   entry = [
-    path.join(manifest.paths.src, 'assets', 'scripts', manifest.entries.js),
+   "@babel/polyfill", path.join(manifest.paths.src, 'assets', 'scripts', manifest.entries.js),
   ];
 
 

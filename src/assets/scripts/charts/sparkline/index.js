@@ -2,22 +2,34 @@ import * as $ from 'jquery';
 import 'jquery-sparkline';
 import { debounce } from 'lodash';
 import { COLORS } from '../../constants/colors';
+import { numberofpatients } from '../../functions/index';
 
 export default (function () {
   // ------------------------------------------------------
   // @Dashboard Sparklines
   // ------------------------------------------------------
-
+  //numberofpatients(30);
   const drawSparklines = () => {
     if ($('#sparklinedash').length > 0) {
-      $('#sparklinedash').sparkline([0, 5, 6, 10, 9, 12, 4, 9], {
+      
+
+
+     numberofpatients(30).then(function(data) {
+      var testob = [];
+      data.forEach (function(elm){
+      testob.push(elm.patientperday);
+      });
+      $('#sparklinedash').sparkline(testob, {
         type: 'bar',
         height: '20',
-        barWidth: '3',
+        barWidth: '2',
         resize: true,
         barSpacing: '3',
         barColor: '#4caf50',
       });
+      
+    });
+
     }
 
     if ($('#sparklinedash2').length > 0) {

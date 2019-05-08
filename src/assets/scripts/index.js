@@ -1,5 +1,6 @@
 import '../styles/index.scss';
 
+import './functions/index.js'; //import './functions/getjson.js'; 
 import './masonry';
 import './charts';
 import './popover';
@@ -15,3 +16,4 @@ import './email';
 import './fullcalendar';
 import './googleMaps';
 import './utils';
+
