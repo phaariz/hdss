@@ -30,7 +30,7 @@ export default (function () {
         backgroundColor: '#fff',
         borderColor: '#fff',
         borderOpacity: 0.25,
-        borderWidth: 0,
+        borderWidth: 1,
         color: '#e6e6e6',
         regionStyle : {
           initial : {
@@ -51,13 +51,13 @@ export default (function () {
 
         // markers : [{
         //   latLng : [21.00, 78.00],
-        //   name : 'INDIA : 350',
+        //   name : 'Dengue : 35 Patients',
         // }, {
         //   latLng : [-33.00, 151.00],
-        //   name : 'Australia : 250',
+        //   name : 'Dyphtheria : 20 Patients',
         // }, {
         //   latLng : [36.77, -119.41],
-        //   name : 'USA : 250',
+        //   name : 'Common Cold : 3 Patients',
         // }, {
         //   latLng : [55.37, -3.41],
         //   name : 'UK   : 250',
@@ -84,8 +84,10 @@ export default (function () {
         scaleColors: ['#b6d6ff', '#005ace'],
         selectedColor: '#c9dfaf',
         selectedRegions: [],
-        enableZoom: false,
-        hoverColor: '#fff',
+        selectedRegion: null,
+        enableZoom: true,
+        showTooltip: true,
+        hoverColor: '#c9dfaf',
       });
     }
   };
