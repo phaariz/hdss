@@ -16,7 +16,7 @@ export default (function () {
         <div
           id="vmap"
           style="
-            height: 400px;
+            height: 300px;
             position: relative;
             overflow: hidden;
             background-color: transparent;
@@ -30,7 +30,7 @@ export default (function () {
         backgroundColor: '#fff',
         borderColor: '#fff',
         borderOpacity: 0.25,
-        borderWidth: 1,
+        borderWidth: 0,
         color: '#e6e6e6',
         regionStyle : {
           initial : {
@@ -49,10 +49,10 @@ export default (function () {
           },
         },
 
-        markers : [{
-          latLng : [21.00, -78.00],
-          name : 'INDIA : 350',
-        }, 
+     //   markers : [{
+       //   latLng : [21.00, -78.00],
+         // name : 'INDIA : 350',
+       // }, 
         // {
         //   latLng : [-33.00, 151.00],
         //   name : 'Dyphtheria : 20 Patients',
@@ -66,17 +66,34 @@ export default (function () {
         //   latLng : [25.20, 55.27],
         //   name : 'UAE : 250',
         //}
-      ],
+    //  ],
         series: {
           regions: [{
             values: {
               'AA': 298,
               'ADh': 200,
-           //   'AU': 760,
-            //  'IN': 200,
-            //  'GB': 120,
+              'HDh': 760,
+              'HA': 200,
+              'Sh' : 100,
+              'N' : 400,
+              'R': 120,
+              'B' : 500,
+              'Lh' : 300,
+              'K' : 400,
+              'AA' : 650,
+              'Adh' : 900,
+              'V' : 300,
+              'M' : 500,
+              'F': 690,
+              'Dh': 1030,
+              'Th': 800,
+              'L': 630,
+              'GA' : 350,
+              'GDh' : 570,
+              'Gn' : 720,
+              'S' : 350
             },
-            scale: ['#03a9f3', '#02a7f1'],
+            scale: ['#ffb3b3', '#e60000'],
             normalizeFunction: 'polynomial',
           }],
         },
@@ -87,10 +104,8 @@ export default (function () {
         scaleColors: ['#b6d6ff', '#005ace'],
         selectedColor: '#c9dfaf',
         selectedRegions: [],
-        selectedRegion: null,
-        enableZoom: true,
-        showTooltip: true,
-        hoverColor: '#c9dfaf',
+        enableZoom: false,
+        hoverColor: '#fff',
       });
     }
   };
