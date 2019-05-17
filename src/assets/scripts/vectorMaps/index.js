@@ -30,7 +30,7 @@ export default (function () {
         backgroundColor: '#fff',
         borderColor: '#fff',
         borderOpacity: 0.25,
-        borderWidth: 1,
+        borderWidth: 0,
         color: '#e6e6e6',
         regionStyle : {
           initial : {
@@ -49,7 +49,6 @@ export default (function () {
           },
         },
 
-<<<<<<< HEAD
       //   markers : [{
       //     coords: [60, 110],
       //     name: 'Escalator 1',
@@ -69,41 +68,31 @@ export default (function () {
       //   //   name : 'UAE : 250',
       //   //}
       // ],
-=======
-<<<<<<< HEAD
-        // markers : [{
-        //   latLng : [21.00, 78.00],
-        //   name : 'Dengue : 35 Patients',
-        // }, {
-=======
-        markers : [{
-          latLng : [21.00, -78.00],
-          name : 'INDIA : 350',
-        }, 
-        // {
->>>>>>> 3884c0c377c0702bed416e8189a7dfb464114804
-        //   latLng : [-33.00, 151.00],
-        //   name : 'Dyphtheria : 20 Patients',
-        // }, {
-        //   latLng : [36.77, -119.41],
-        //   name : 'Common Cold : 3 Patients',
-        // }, {
-        //   latLng : [55.37, -3.41],
-        //   name : 'UK   : 250',
-        // }, {
-        //   latLng : [25.20, 55.27],
-        //   name : 'UAE : 250',
-        //}
-      ],
->>>>>>> fe195970a95ff83c3aaa79651cee41439931d2a8
         series: {
           regions: [{
             values: {
               'AA': 298,
               'ADh': 200,
               'HDh': 760,
-            //  'IN': 200,
-            //  'GB': 120,
+              'HA': 200,
+              'Sh' : 100,
+              'N' : 400,
+              'R': 120,
+              'B' : 500,
+              'Lh' : 300,
+              'K' : 400,
+              'AA' : 650,
+              'Adh' : 900,
+              'V' : 300,
+              'M' : 500,
+              'F': 690,
+              'Dh': 1030,
+              'Th': 800,
+              'L': 630,
+              'GA' : 350,
+              'GDh' : 570,
+              'Gn' : 720,
+              'S' : 350
             },
             scale: ['#ffebe6', '#FF0000'],
             normalizeFunction: 'polynomial',
@@ -116,10 +105,8 @@ export default (function () {
         scaleColors: ['#b6d6ff', '#005ace'],
         selectedColor: '#c9dfaf',
         selectedRegions: [],
-        selectedRegion: null,
-        enableZoom: true,
-        showTooltip: true,
-        hoverColor: '#c9dfaf',
+        enableZoom: false,
+        hoverColor: '#fff',
       });
     }
   };
