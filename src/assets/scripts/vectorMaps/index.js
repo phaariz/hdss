@@ -49,18 +49,11 @@ export default (function () {
           },
         },
 
-<<<<<<< HEAD
-        // markers : [{
-        //   latLng : [21.00, 78.00],
-        //   name : 'Dengue : 35 Patients',
-        // }, {
-=======
         markers : [{
           latLng : [21.00, -78.00],
           name : 'INDIA : 350',
         }, 
         // {
->>>>>>> 3884c0c377c0702bed416e8189a7dfb464114804
         //   latLng : [-33.00, 151.00],
         //   name : 'Dyphtheria : 20 Patients',
         // }, {
