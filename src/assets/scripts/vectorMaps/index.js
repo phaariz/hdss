@@ -49,34 +49,35 @@ export default (function () {
           },
         },
 
-        markers : [{
-          latLng : [21.00, -78.00],
-          name : 'INDIA : 350',
-        }, 
-        // {
-        //   latLng : [-33.00, 151.00],
-        //   name : 'Australia : 250',
-        // }, {
-        //   latLng : [36.77, -119.41],
-        //   name : 'USA : 250',
-        // }, {
-        //   latLng : [55.37, -3.41],
-        //   name : 'UK   : 250',
-        // }, {
-        //   latLng : [25.20, 55.27],
-        //   name : 'UAE : 250',
-        //}
-      ],
+      //   markers : [{
+      //     coords: [60, 110],
+      //     name: 'Escalator 1',
+      //     style: {fill: 'yellow'}
+      //    }, 
+      //   // {
+      //   //   latLng : [-33.00, 151.00],
+      //   //   name : 'Australia : 250',
+      //   // }, {
+      //   //   latLng : [36.77, -119.41],
+      //   //   name : 'USA : 250',
+      //   // }, {
+      //   //   latLng : [55.37, -3.41],
+      //   //   name : 'UK   : 250',
+      //   // }, {
+      //   //   latLng : [25.20, 55.27],
+      //   //   name : 'UAE : 250',
+      //   //}
+      // ],
         series: {
           regions: [{
             values: {
               'AA': 298,
               'ADh': 200,
-           //   'AU': 760,
+              'HDh': 760,
             //  'IN': 200,
             //  'GB': 120,
             },
-            scale: ['#03a9f3', '#02a7f1'],
+            scale: ['#ffebe6', '#FF0000'],
             normalizeFunction: 'polynomial',
           }],
         },
