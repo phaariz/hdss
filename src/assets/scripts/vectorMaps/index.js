@@ -49,10 +49,11 @@ export default (function () {
           },
         },
 
-        // markers : [{
-        //   latLng : [21.00, 78.00],
-        //   name : 'INDIA : 350',
-        // }, {
+        markers : [{
+          latLng : [21.00, -78.00],
+          name : 'INDIA : 350',
+        }, 
+        // {
         //   latLng : [-33.00, 151.00],
         //   name : 'Australia : 250',
         // }, {
@@ -64,20 +65,22 @@ export default (function () {
         // }, {
         //   latLng : [25.20, 55.27],
         //   name : 'UAE : 250',
-        // }],
-        // series: {
-        //   regions: [{
-        //     values: {
-        //       'US': 298,
-        //       'SA': 200,
-        //       'AU': 760,
-        //       'IN': 200,
-        //       'GB': 120,
-        //     },
-        //     scale: ['#03a9f3', '#02a7f1'],
-        //     normalizeFunction: 'polynomial',
-        //   }],
-        // },
+        //}
+      ],
+        series: {
+          regions: [{
+            values: {
+              'AA': 298,
+              'ADh': 200,
+           //   'AU': 760,
+            //  'IN': 200,
+            //  'GB': 120,
+            },
+            scale: ['#03a9f3', '#02a7f1'],
+            normalizeFunction: 'polynomial',
+          }],
+        },
+        
         hoverOpacity: null,
         normalizeFunction: 'linear',
         zoomOnScroll: false,

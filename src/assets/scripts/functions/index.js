@@ -21,6 +21,29 @@ export async function numberofpatients(days){
     });
   }
  
+  export async function getLocations(){
+    return await get('https://dssapi.nodescave.com/locations').then(
+    function(response) {
+      let v = JSON.parse(response);
+       return v;
+      },
+      function(error) {
+        console.error("Failed!", error);
+      });
+    }
+
+    export async function compareyears(one, two){
+      return await get('https://dssapi.nodescave.com/compareyears/?param='+one+'&param2='+two).then(
+      function(response) {
+        let v = JSON.parse(response);
+       // console.log(v);
+         return v;
+        },
+        function(error) {
+          console.error("Failed!", error);
+        });
+      }
+
 
 
 

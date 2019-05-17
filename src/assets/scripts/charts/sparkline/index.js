@@ -2,7 +2,7 @@ import * as $ from 'jquery';
 import 'jquery-sparkline';
 import { debounce } from 'lodash';
 import { COLORS } from '../../constants/colors';
-import { numberofpatients } from '../../functions/index';
+import { numberofpatients, getLocations } from '../../functions/index';
 
 export default (function () {
   // ------------------------------------------------------
@@ -10,10 +10,10 @@ export default (function () {
   // ------------------------------------------------------
   //numberofpatients(30);
   const drawSparklines = () => {
+
+
     if ($('#sparklinedash').length > 0) {
       
-
-
      numberofpatients(30).then(function(data) {
       var testob = [];
       data.forEach (function(elm){
@@ -29,11 +29,21 @@ export default (function () {
       });
       
     });
-
     }
 
+
+    //locations
+
+
     if ($('#sparklinedash2').length > 0) {
-      $('#sparklinedash2').sparkline([0, 5, 6, 10, 9, 12, 4, 9], {
+
+      getLocations().then(function(data){
+     //   console.log(data);
+        var lid = [];
+        data.forEach (function(elm){
+          lid.push(elm.LocationID);
+        });
+      $('#sparklinedash2').sparkline([0,10,5,15,6,9], {
         type: 'bar',
         height: '20',
         barWidth: '3',
@@ -41,8 +51,12 @@ export default (function () {
         barSpacing: '3',
         barColor: '#9675ce',
       });
-    }
+    });
+  }
+    
 
+
+//
     if ($('#sparklinedash3').length > 0) {
       $('#sparklinedash3').sparkline([0, 5, 6, 10, 9, 12, 4, 9], {
         type: 'bar',
