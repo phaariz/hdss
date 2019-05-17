@@ -16,7 +16,7 @@ export default (function () {
         <div
           id="vmap"
           style="
-            height: 400px;
+            height: 300px;
             position: relative;
             overflow: hidden;
             background-color: transparent;
@@ -49,31 +49,10 @@ export default (function () {
           },
         },
 
-<<<<<<< HEAD
-      //   markers : [{
-      //     coords: [60, 110],
-      //     name: 'Escalator 1',
-      //     style: {fill: 'yellow'}
-      //    }, 
-      //   // {
-      //   //   latLng : [-33.00, 151.00],
-      //   //   name : 'Australia : 250',
-      //   // }, {
-      //   //   latLng : [36.77, -119.41],
-      //   //   name : 'USA : 250',
-      //   // }, {
-      //   //   latLng : [55.37, -3.41],
-      //   //   name : 'UK   : 250',
-      //   // }, {
-      //   //   latLng : [25.20, 55.27],
-      //   //   name : 'UAE : 250',
-      //   //}
-      // ],
-=======
-        markers : [{
-          latLng : [21.00, -78.00],
-          name : 'INDIA : 350',
-        }, 
+     //   markers : [{
+       //   latLng : [21.00, -78.00],
+         // name : 'INDIA : 350',
+       // }, 
         // {
         //   latLng : [-33.00, 151.00],
         //   name : 'Dyphtheria : 20 Patients',
@@ -87,14 +66,12 @@ export default (function () {
         //   latLng : [25.20, 55.27],
         //   name : 'UAE : 250',
         //}
-      ],
->>>>>>> b44d2c51736744d0de46c40fc98ce4ee9ed0f1cb
+    //  ],
         series: {
           regions: [{
             values: {
               'AA': 298,
               'ADh': 200,
-<<<<<<< HEAD
               'HDh': 760,
               'HA': 200,
               'Sh' : 100,
@@ -115,13 +92,8 @@ export default (function () {
               'GDh' : 570,
               'Gn' : 720,
               'S' : 350
-=======
-           //   'AU': 760,
-            //  'IN': 200,
-            //  'GB': 120,
->>>>>>> b44d2c51736744d0de46c40fc98ce4ee9ed0f1cb
             },
-            scale: ['#03a9f3', '#02a7f1'],
+            scale: ['#ffb3b3', '#e60000'],
             normalizeFunction: 'polynomial',
           }],
         },
