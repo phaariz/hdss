@@ -49,10 +49,18 @@ export default (function () {
           },
         },
 
+<<<<<<< HEAD
         // markers : [{
         //   latLng : [21.00, 78.00],
         //   name : 'Dengue : 35 Patients',
         // }, {
+=======
+        markers : [{
+          latLng : [21.00, -78.00],
+          name : 'INDIA : 350',
+        }, 
+        // {
+>>>>>>> 3884c0c377c0702bed416e8189a7dfb464114804
         //   latLng : [-33.00, 151.00],
         //   name : 'Dyphtheria : 20 Patients',
         // }, {
@@ -64,20 +72,22 @@ export default (function () {
         // }, {
         //   latLng : [25.20, 55.27],
         //   name : 'UAE : 250',
-        // }],
-        // series: {
-        //   regions: [{
-        //     values: {
-        //       'US': 298,
-        //       'SA': 200,
-        //       'AU': 760,
-        //       'IN': 200,
-        //       'GB': 120,
-        //     },
-        //     scale: ['#03a9f3', '#02a7f1'],
-        //     normalizeFunction: 'polynomial',
-        //   }],
-        // },
+        //}
+      ],
+        series: {
+          regions: [{
+            values: {
+              'AA': 298,
+              'ADh': 200,
+           //   'AU': 760,
+            //  'IN': 200,
+            //  'GB': 120,
+            },
+            scale: ['#03a9f3', '#02a7f1'],
+            normalizeFunction: 'polynomial',
+          }],
+        },
+        
         hoverOpacity: null,
         normalizeFunction: 'linear',
         zoomOnScroll: false,

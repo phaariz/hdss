@@ -1,5 +1,6 @@
 import Chart from 'chart.js';
 import { COLORS } from '../../constants/colors';
+import { compareyears} from '../../functions/index'
 
 export default (function () {
   // ------------------------------------------------------
@@ -11,35 +12,57 @@ export default (function () {
   if (lineChartBox) {
     const lineCtx = lineChartBox.getContext('2d');
     lineChartBox.height = 80;
+    compareyears(2016,2017).then(function(data){
+        console.log("my data loaded");
+        var set1 = [];
+        var set2 = [];
+        data[0].forEach(function(elm) {
+            set1[elm.month_-1] = elm.patientpermonth;
+        });
+        data[1].forEach(function(elm) {
+            set2[elm.month_-1] = elm.patientpermonth;
+        });
+        for(var i=0; i<12; i++) {
+          if (set1[i] == null) {
+            set1[i] = 0;
+          }
+          if (set2[i] == null) {
+            set2[i] = 0;
+          }
+        }
+//
+new Chart(lineCtx, {
+  type: 'line',
+  data: {
+    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'],
+    datasets: [{
+      label                : 'Series A',
+      backgroundColor      : 'rgba(237, 231, 246, 0.5)',
+      borderColor          : COLORS['deep-purple-500'],
+      pointBackgroundColor : COLORS['deep-purple-700'],
+      borderWidth          : 2,
+      data                 : set1,
+    }, {
+      label                : 'Series B',
+      backgroundColor      : 'rgba(232, 245, 233, 0.5)',
+      borderColor          : COLORS['blue-500'],
+      pointBackgroundColor : COLORS['blue-700'],
+      borderWidth          : 2,
+      data                 : set2,
+    }],
+  },
 
-    new Chart(lineCtx, {
-      type: 'line',
-      data: {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-        datasets: [{
-          label                : 'Series A',
-          backgroundColor      : 'rgba(237, 231, 246, 0.5)',
-          borderColor          : COLORS['deep-purple-500'],
-          pointBackgroundColor : COLORS['deep-purple-700'],
-          borderWidth          : 2,
-          data                 : [60, 50, 70, 60, 50, 70, 60],
-        }, {
-          label                : 'Series B',
-          backgroundColor      : 'rgba(232, 245, 233, 0.5)',
-          borderColor          : COLORS['blue-500'],
-          pointBackgroundColor : COLORS['blue-700'],
-          borderWidth          : 2,
-          data                 : [70, 75, 85, 70, 75, 85, 70],
-        }],
-      },
+  options: {
+    legend: {
+      display: true,
+    },
+  },
 
-      options: {
-        legend: {
-          display: false,
-        },
-      },
-
+});
+//
     });
+
+ 
   }
 
   // ------------------------------------------------------
