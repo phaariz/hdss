@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Diseases</title>
+    <style>
+      #loader {
+        transition: all 0.3s ease-in-out;
+        opacity: 1;
+        visibility: visible;
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        background: #fff;
+        z-index: 90000;
+      }
+
+      #loader.fadeOut {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+
+
+      .spinner {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: calc(50% - 20px);
+        left: calc(50% - 20px);
+        background-color: #333;
+        border-radius: 100%;
+        -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+        animation: sk-scaleout 1.0s infinite ease-in-out;
+      }
+
+      @-webkit-keyframes sk-scaleout {
+        0% { -webkit-transform: scale(0) }
+        100% {
+          -webkit-transform: scale(1.0);
+          opacity: 0;
+        }
+      }
+
+      @keyframes sk-scaleout {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        } 100% {
+          -webkit-transform: scale(1.0);
+          transform: scale(1.0);
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body class="app">
+    <!-- @TOC -->
+    <!-- =================================================== -->
+    <!--
+      + @Page Loader
+      + @App Content
+          - #Left Sidebar
+              > $Sidebar Header
+              > $Sidebar Menu
+
+          - #Main
+              > $Topbar
+              > $App Screen Content
+    -->
+
+    <!-- @Page Loader -->
+    <!-- =================================================== -->
+    <div id='loader'>
+      <div class="spinner"></div>
+    </div>
+
+    <script>
+      window.addEventListener('load', function load() {
+        const loader = document.getElementById('loader');
+        setTimeout(function() {
+          loader.classList.add('fadeOut');
+        }, 300);
+      });
+    </script>
+
+    <!-- @App Content -->
+    <!-- =================================================== -->
+    <div>
+      <!-- #Left Sidebar ==================== -->
+      <div class="sidebar">
+        <div class="sidebar-inner">
+          <!-- ### $Sidebar Header ### -->
+          <div class="sidebar-logo">
+            <div class="peers ai-c fxw-nw">
+              <div class="peer peer-greed">
+                <a class="sidebar-link td-n" href="index.html">
+                  <div class="peers ai-c fxw-nw">
+                    <div class="peer">
+                      <div class="logo">
+                        <img src="assets/static/images/logo.png" alt="">
+                      </div>
+                    </div>
+                    <div class="peer peer-greed">
+                      <h5 class="lh-1 mB-0 logo-text">Rakkaa</h5>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="peer">
+                <div class="mobile-toggle sidebar-toggle">
+                  <a href="" class="td-n">
+                    <i class="ti-arrow-circle-left"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ### $Sidebar Menu ### -->
+          <ul class="sidebar-menu scrollable pos-r">
+            <li class="nav-item mT-30 active">
+              <a class="sidebar-link" href="index.html">
+                <span class="icon-holder">
+                  <i class="c-blue-500 ti-home"></i>
+                </span>
+                <span class="title">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="dropdown-toggle" href="javascript:void(0);">
+                <span class="icon-holder">
+                  <i class="c-blue-500 ti-map"></i>
+                </span>
+                <span class="title">Regions</span>
+                <span class="arrow">
+                  <i class="ti-angle-right"></i>
+                </span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class='sidebar-link' href="regions.html">North Ari Atoll</a>
+                </li>
+                <li>
+                  <a class='sidebar-link' href="regions.html">South Makunu Atoll</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="dropdown-toggle" href="javascript:void(0);">
+                <span class="icon-holder">
+                    <i class="c-blue-500 ti-layout-list-thumb"></i>
+                  </span>
+                <span class="title">Diseases</span>
+                <span class="arrow">
+                    <i class="ti-angle-right"></i>
+                  </span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="diseases.html">Influenza</a>
+                </li>
+                <li>
+                  <a href="diseases.html">Choreography</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- #Main ============================ -->
+      <div class="page-container">
+       <!-- ### $Topbar ### -->
+       <div class="header navbar">
+        <div class="header-container">
+          <ul class="nav-left">
+            <li>
+              <a id='sidebar-toggle' class="sidebar-toggle" href="javascript:void(0);">
+                <i class="ti-menu"></i>
+              </a>
+            </li>
+            <!-- <li class="search-box">
+              <a class="search-toggle no-pdd-right" href="javascript:void(0);">
+                <i class="search-icon ti-search pdd-right-10"></i>
+                <i class="search-icon-close ti-close pdd-right-10"></i>
+              </a>
+            </li>
+            <li class="search-input">
+              <input class="form-control" type="text" placeholder="Search...">
+            </li> -->
+          </ul>
+          <ul class="nav-right">
+            <li class="notifications dropdown">
+              <span class="counter bgc-red">3</span>
+              <a href="" class="dropdown-toggle no-after" data-toggle="dropdown">
+                <i class="ti-bell"></i>
+              </a>
+
+              <ul class="dropdown-menu">
+                <li class="pX-20 pY-15 bdB">
+                  <i class="ti-bell pR-10"></i>
+                  <span class="fsz-sm fw-600 c-grey-900">Notifications</span>
+                </li>
+                <li>
+                  <ul class="ovY-a pos-r scrollable lis-n p-0 m-0 fsz-sm">
+                    <li>
+                      <a href="" class='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
+                        <div class="peer mR-15">
+                          <img class="w-3r bdrs-50p" src="https://randomuser.me/api/portraits/men/1.jpg" alt="">
+                        </div>
+                        <div class="peer peer-greed">
+                          <span>
+                            <span class="fw-500">John Doe</span>
+                            <span class="c-grey-600">liked your <span class="text-dark">post</span>
+                            </span>
+                          </span>
+                          <p class="m-0">
+                            <small class="fsz-xs">5 mins ago</small>
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="" class='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
+                        <div class="peer mR-15">
+                          <img class="w-3r bdrs-50p" src="https://randomuser.me/api/portraits/men/2.jpg" alt="">
+                        </div>
+                        <div class="peer peer-greed">
+                          <span>
+                            <span class="fw-500">Moo Doe</span>
+                            <span class="c-grey-600">liked your <span class="text-dark">cover image</span>
+                            </span>
+                          </span>
+                          <p class="m-0">
+                            <small class="fsz-xs">7 mins ago</small>
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="" class='peers fxw-nw td-n p-20 bdB c-grey-800 cH-blue bgcH-grey-100'>
+                        <div class="peer mR-15">
+                          <img class="w-3r bdrs-50p" src="https://randomuser.me/api/portraits/men/3.jpg" alt="">
+                        </div>
+                        <div class="peer peer-greed">
+                          <span>
+                            <span class="fw-500">Lee Doe</span>
+                            <span class="c-grey-600">commented on your <span class="text-dark">video</span>
+                            </span>
+                          </span>
+                          <p class="m-0">
+                            <small class="fsz-xs">10 mins ago</small>
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="pX-20 pY-15 ta-c bdT">
+                  <span>
+                    <a href="" class="c-grey-600 cH-blue fsz-sm td-n">View All Notifications <i class="ti-angle-right fsz-xs mL-10"></i></a>
+                  </span>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+        <!-- ### $App Screen Content ### -->
+        <main class='main-content bgc-grey-100'>
+          <div id='mainContent'>
+              <h4 class="c-grey-900 mT-10 mB-30">Disease - Influenza</h4>
+              <p>Influenza, commonly known as the flu, is an infectious disease caused by an influenza virus. Symptoms can be mild to severe. The most common symptoms include: high fever, runny nose, sore throat, muscle pains, headache, coughing, sneezing, and feeling tired.</p>
+              <div class="dataTables_length" id="dataTable_length">
+                <label>Select Data <select name="dataTable_length" aria-controls="dataTable" class="">
+                  <option value="2019">2019</option>
+                  <option value="2018">2018</option>
+                </select></label></div>
+            <div class="row gap-20 masonry pos-r">
+              <div class="masonry-sizer col-md-6 pos-a"></div>
+              <div class="masonry-item col-md-12">
+                <div class="bgc-white p-20 bd">
+                  <h6 class="c-grey-900">Monthly Comparison of Outbreaks</h6>
+                  <div class="mT-30">
+                    <canvas id="line-chart" height="220"></canvas>
+                  </div>
+                </div>
+              </div>
+              <div class="masonry-item col-md-6">
+                <div class="bgc-white p-20 bd">
+                  <h6 class="c-grey-900">Reported Patients</h6>
+                  <div class="mT-30">
+                    <canvas id="area-chart" height="220"></canvas>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="masonry-item col-md-6">
+                <div class="bgc-white p-20 bd">
+                  <h6 class="c-grey-900">Scatter Chart</h6>
+                  <div class="mT-30">
+                    <canvas id="scatter-chart" height="220"></canvas>
+                  </div>
+                </div>
+              </div> -->
+              <div class="masonry-item col-md-6">
+                <div class="bgc-white p-20 bd">
+                  <h6 class="c-grey-900">Patients by Gender</h6>
+                  <div class="mT-30">
+                    <canvas id="bar-chart" height="220"></canvas>
+                  </div>
+                </div>
+              </div>
+              <div class="masonry-item col-md-6">
+                <div class="bgc-white p-20 bd">
+                  <h6 class="c-grey-900">Top Diseases</h6>
+                  <div class="mT-30">
+                    <div class="peers ai-c jc-sb fxw-nw bdB pY-15">
+                      <div class="peer">
+                        <span>Cholera</span>
+                      </div>
+                      <div class="peer">
+                        <span class="sparkline">&nbsp;</span>
+                      </div>
+                    </div>
+                    <div class="peers ai-c jc-sb fxw-nw bdB pY-15">
+                      <div class="peer">
+                        <span>Influenza</span>
+                      </div>
+                      <div class="peer">
+                        <span class="sparkline">&nbsp;</span>
+                      </div>
+                    </div>
+                    <div class="peers ai-c jc-sb fxw-nw bdB pY-15">
+                      <div class="peer">
+                        <span>Spark Tristate</span>
+                      </div>
+                      <div class="peer">
+                        <span class="sparkline">&nbsp;</span>
+                      </div>
+                    </div>
+                    <div class="peers ai-c jc-sb fxw-nw bdB pY-15">
+                      <div class="peer">
+                        <span>Spark Discrete</span>
+                      </div>
+                      <div class="peer">
+                        <span class="sparkline">&nbsp;</span>
+                      </div>
+                    </div>
+                    <div class="peers ai-c jc-sb fxw-nw bdB pY-15">
+                      <div class="peer">
+                        <span>Spark Bullet</span>
+                      </div>
+                      <div class="peer">
+                        <span class="sparkline">&nbsp;</span>
+                      </div>
+                    </div>
+                    <div class="peers ai-c jc-sb fxw-nw pT-15">
+                      <div class="peer">
+                        <span>Spark Box</span>
+                      </div>
+                      <div class="peer">
+                        <span class="sparkline">&nbsp;</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="masonry-item col-md-6">
+                <div class="bgc-white p-20 bd">
+                  <h6 class="c-grey-900">Easy Pie Charts</h6>
+                  <div class="mT-30">
+                    <div class="peers mT-20 fxw-nw@lg+ jc-sb ta-c gap-10">
+                      <div class="peer">
+                        <div class="easy-pie-chart" data-size='80' data-percent="75" data-bar-color='#f44336'>
+                          <span></span>
+                        </div>
+                        <h6 class="fsz-sm">New Users</h6>
+                      </div>
+                      <div class="peer">
+                        <div class="easy-pie-chart" data-size='80' data-percent="50" data-bar-color='#2196f3'>
+                          <span></span>
+                        </div>
+                        <h6 class="fsz-sm">New Purchases</h6>
+                      </div>
+                      <div class="peer">
+                        <div class="easy-pie-chart" data-size='80' data-percent="65" data-bar-color='#f44336'>
+                          <span></span>
+                        </div>
+                        <h6 class="fsz-sm">New Customers</h6>
+                      </div>
+                      <div class="peer">
+                        <div class="easy-pie-chart" data-size='80' data-percent="90" data-bar-color='#ff9800'>
+                          <span></span>
+                        </div>
+                        <h6 class="fsz-sm">Bounce Rate</h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </main>
+
+        <!-- ### $App Screen Footer ### -->
+        <footer class="bdT ta-c p-30 lh-0 fsz-sm c-grey-600">
+          <span>Copyright © 2019 Rakkaa Health DSS. All rights reserved.</span>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
